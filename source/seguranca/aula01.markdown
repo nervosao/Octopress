@@ -1,0 +1,166 @@
+---
+layout: page
+title: "Disciplina: Segurança em redes"
+date: 2015-03-01 00:34
+comments: false
+sharing: true
+toc: true
+footer: true
+---
+
+
+## Aula01 – Conceitos de Segurança da Informação
+
+###1. Slide da aula
+
+<center>
+<iframe src="//www.slideshare.net/slideshow/embed_code/45446216" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//pt.slideshare.net/carlosveiga961/aula01-introduo-segurana" title="Aula01 introdução à segurança" target="_blank">Aula01 introdução à segurança</a> </strong> from <strong><a href="//www.slideshare.net/carlosveiga961" target="_blank">Carlos Veiga</a></strong> </div>
+</center>
+
+
+###2. Conceitos e Definições
+
+
+**Ativo** – Os ativos  estão representados por todos os bens e direitos que uma instituição econômica possui e que possam ser valorizados em termos monetários.
+
+**Segurança da Informação** – preservação da confidencialidade, da integridade e da disponibilidade da informação; adicionalmente, outras propriedades, tais  como autenticidade, responsabilidade, não repúdio e confiabilidade, podem também estar envolvidas.
+
+**Ameaça** – causa potencial de um incidente indesejado, que pode resultar em dano para um sistema ou  organização.
+Vulnerabilidade – fragilidade de um ativo ou grupo de  ativos que pode ser explorada por uma ou mais ameaças.
+Evento de segurança da informação – ocorrência  identificada de um sistema, serviço ou rede, que indica uma possível violação da política de segurança da informação ou falha de controles, ou uma situação  previamente desconhecida, que possa ser relevante para  a segurança da informação.
+
+**Risco** – combinação da probabilidade de um evento e de suas consequências.
+Incidente de segurança da informação – um   incidente de segurança da informação é indicado por um simples ou por uma série de eventos de segurança da informação indesejados ou inesperados, que tenham uma grande probabilidade de comprometer as operações do negócio e ameaçar a segurança da informação.
+
+**Política** – intenções e diretrizes globais formalmente expressas pela direção.
+
+
+> A Segurança da Informação se refere à proteção existente sobre as informações de uma determinada empresa ou pessoa, isto é, aplica-se tanto as informações corporativas quanto às pessoais. 
+Entende-se por informação todo e qualquer conteúdo ou dado que tenha valor para alguma organização ou pessoa. Ela pode estar guardada para uso restrito ou exposta ao público para consulta ou aquisição.
+
+###3. Ambientes cooperativos
+
+O mundo moderno e globalizado faz com que as organizações busquem o mais alto nível de competitividade, no qual novos mercados são disputados vorazmente.
+Além das fusões entre as organizações, as parcerias estratégica e as formas de comunicação avançam de tal modo que a infra-estrutura de rede – de vital importância para os negócios – passa a ser uma peça fundamental e inequívoco a todos;
+O Ambiente cooperativo é caracterizado pelo relacionamento e pela integração dos mais diversos sistemas de diferentes organizações
+
+####3.1 Tecnologia como parte dos negócios
+
+O mundo moderno faz com que as organizações busquem o mais alto nível de competitividade;
+A competitividade global é ditada pela velocidade, qualidade e eficiência;
+
+**Casos de sucesso com a Web:**
+
+  * Ponto Frio – Atingiu R$ 13 milhões de reais somente no mês de dezembro de 2002;
+  * Submarino – Surgiu na net em 1999, faturou R$ 130 milhões em 2002;
+  * Americanas – receita líquida de R$ 3,8 bilhões em 2009;
+  * Entre Janeiro e Julho de 2010 -> o E-commerce faturou R$ 7,8 bilhões, com crescimento de 41,2% em comparação ao mesmo período do ano passado;
+
+####3.2 Problemas nos ambientes cooperativos
+
+A propriedade determinante dos ambientes cooperativos e a complexidade que envolve a comunicação entre diferentes tecnologias (cada organização utiliza a sua) diferentes usuários, diferentes culturas e diferentes políticas internas.
+ O conjunto de protocolos da suite TCP/IP e a internet possibilitaram o avanço em direção aos ambientes cooperativos, ao tornar possíveis as conexões entre as diferentes organizações, de modo mais simples e mais barato que as conexões dedicadas. Porém, essa interligação teve como consequência uma enorme implicação quanto a proteção dos valores de cada organização.
+
+Algumas situações que refletem o grau de complexidade existente nos ambientes cooperativos podem ser vistas quando são analisadas, por exemplo, as conexões entre três organizações (A, B e C). Como proteger os valores da organização A, evitando que um usuário da organização B acesse informações que pertencem somente à organização A?
+
+###4. Segurança em ambientes cooperativos
+
+Os problemas a serem resolvidos nos ambientes cooperativos refletem fielmente a situação de muitas organizações atuais que buscam a vantagem competitiva por meio da necessária utilização da tecnologia. 
+O ambiente cooperativo é complexo, e a segurança necessária a ser implementada e igualmente complexa, envolvendo
+aspectos de negócios, humanos, tecnológicos, processuais e jurídicos.
+Porém, isso não significa que eles tenham maior relevância com relação aos outros. 
+Todos os aspectos são de extrema importância e devem ser considerados na implantação da segurança nos ambientes
+cooperativos. 
+A gestão de riscos e a gestão de continuidade de negócios também são fundamentais para a estratégia de segurança.
+
+
+###5. Propriedades da Segurança da Informação
+
+- **Confidencialidade **- propriedade que limita o acesso a informação tão somente às entidades legítimas, ou seja, àquelas autorizadas pelo proprietário da informação. 
+
+- **Integridade **- propriedade que garante que a informação manipulada mantenha todas as características originais estabelecidas pelo proprietário da informação, incluindo controle de mudanças e garantia do seu ciclo de vida (nascimento,manutenção e destruição). 
+
+- **Disponibilidade **- propriedade que garante que a informação esteja sempre disponível para o uso legítimo, ou seja, por aqueles usuários autorizados pelo proprietário da informação. 
+
+- **Autenticidade** - Entende-se por autenticidade a certeza absoluta de que um objeto (em análise) provém das fontes anunciadas e que não foi alvo de mutações ao longo de um processo. Na telecomunicação, uma mensagem será autêntica se for, de fato, recebida na íntegra, diretamente do emissor. Portanto, autenticidade é algo nunca encontrado em algo como blogs, por exemplo. 
+
+**Propriedades Secundárias**
+
+- Legalidade;
+- Autorização;
+- Auditoria;
+- Severidade;
+- Relevância do ativo;
+- Relevância do Processo;
+- Criticidade;
+
+**Legalidade:**
+
+- Valor legal da informação;
+- Análise de cláusulas contratuais;
+- Concordância com a legislação.
+
+**Auditoria:**
+
+- Coleta de evidências;
+- Busca a identificação de entidades;
+- Busca a origem, o destino e os meios de tráfego da informação.
+
+**Severidade:**
+
+- Gravidade dos danos ao ativo;
+- Se as vulnerabilidade forem exploradas;
+
+**Relevância do Ativo:**
+
+- Grau de importância de uma informação;
+- Quando os processos dependem da informação;
+- Quando a organização depende da informação;
+
+
+**Relevância do Processo:**
+
+- Grau de importância do processo;
+- Objetivos da organização dependem dele;
+- Sobrevivência da organização depende do processo;
+
+**Criticidade:**
+
+- Gravidade do impacto no negócio;
+- Ausência de um ativo da informação;
+- Perda ou redução de funcionalidade;
+- Uso indevido ou não autorizado de ativos da informação.
+
+**Irretratabilidade:**
+
+- Sinônimo de não-repúdio;
+- Informação possui a identificação do emissor;
+- A identificação autentica o autor;
+- Autor não pode negar a geração da informação.
+- Certificado Digital.
+
+###6. Ameaças à segurança
+
+- **Perda de Confidencialidade: **seria quando há uma quebra de sigilo de uma determinada informação (ex: a senha de um usuário ou administrador de sistema) permitindo com que sejam expostas informações restritas as quais seriam acessíveis apenas por um determinado grupo de usuários. 
+
+- **Perda de Integridade:** aconteceria quando uma determinada informação fica exposta a manuseio por uma pessoa não autorizada, que efetua alterações que não foram aprovadas e não estão sob o controle do proprietário (corporativo ou privado) da informação. 
+
+- **Perda de Disponibilidade:** acontece quando a informação deixa de estar acessível por quem necessita dela. Seria o caso da perda de comunicação com um sistema importante para a empresa, que aconteceu com a queda de um servidor ou de uma aplicação crítica de negócio, que apresentou uma falha devido a um erro causado por motivo interno ou externo ao equipamento ou por ação não autorizada de pessoas com ou sem má intenção. 
+
+Depois de identificado o potencial de ataque, as organizações têm que decidir o nível de segurança a estabelecer para uma rede ou sistema os recursos físicos e lógicos a necessitar de proteção. No nível de segurança devem ser quantificados os custos associados aos ataques e os associados à implementação de mecanismos de proteção para minimizar a probabilidade de ocorrência de um ataque.
+
+**Segurança física**
+
+Considera as ameaças físicas como incêndios, desabamentos, relâmpagos, alagamento, acesso indevido de pessoas, forma inadequada de tratamento e manuseamento do material.
+
+**Segurança lógica**
+
+Atenta contra ameaças ocasionadas por vírus, acessos remotos à rede, backup desatualizados, violação de senhas, etc.
+Segurança lógica é a forma como um sistema é protegido no nível de sistema operacional e de aplicação. Normalmente é considerada como proteção contra ataques, mas também significa proteção de sistemas contra erros não intencionais, como remoção acidental de importantes arquivos de sistema ou aplicação.
+
+### Referências
+
+http://www.inf.furb.br/~paulo/disciplinas/Seguran%E7aDeRedes/1-Conceitos.ppt
+http://pt.wikipedia.org/wiki/Seguran%C3%A7a_da_informa%C3%A7%C3%A3o
+
+Norma: ISO 27001:2006

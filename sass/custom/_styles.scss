@@ -1,0 +1,14 @@
+// This File is imported last, and will override other styles in the cascade
+// Add styles here to make changes without digging in too much
+article {
+  ol, ul {
+    padding-left: 3em;
+  }
+}
+
+article p{
+    text-align:justify;
+    margin-bottom: 1em;
+}
+@import "mixins";
+

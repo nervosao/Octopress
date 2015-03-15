@@ -1,0 +1,462 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Disciplina: Aplicações Em Redes - Blog do Prof. Nervosao</title>
+  <meta name="author" content="Nervosao">
+
+  
+  <meta name="description" content="Disciplina: Aplicações Em Redes Mar 8th, 2015 12:34 am Aula 02 - Aula02 - Protocolos de Email 1. Slide da aula Aula02 - Protocolos de Email 2. SMTP &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://carlosveiga.com.br/aplicacoes/aula02.html">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Blog do Prof. Nervosao" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript">
+            // Avoid conflict with ender.js.
+                jQuery.noConflict();
+        </script>
+        <!-- jQuery Form Plugin -->
+        <script src="http://malsup.github.com/jquery.form.js"></script>
+        <!-- jQuery Form Validation Plugin -->
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+        <script src="/javascripts/google_form.js"></script>
+        <!-- jQuery Table of Content Plugin -->
+        <script src="/javascripts/jquery.tableofcontents.min.js" type="text/javascript"></script>
+        <script src="/javascripts/generate-toc.js" type="text/javascript"></script>
+
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Blog do Prof. Nervosao</a></h1>
+  
+    <h2>Materiais para as Aulas</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:carlosveiga.com.br" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Início</a></li>
+  <li><a href="/prointer">Prointer</a></li>
+  <li><a href="/seguranca">Segurança</a></li>
+  <li><a href="/aplicacoes">Aplicações</a></li>
+  <li><a href="/infra">Infra</a></li>
+  <li><a href="/bd">Banco de dados</a></li>
+  <li><a href="http://github.com/nervosao/">Github</a></li>
+  <li><a href="http://wiki.carlosveiga.com.br/foswiki/">Wiki</a></li>
+</ul>
+
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">Disciplina: Aplicações Em Redes</h1>
+    <p class="meta">
+
+
+
+
+<time class='entry-date' datetime='2015-03-08T00:34:00-04:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>12:34 am</span></time></p>
+  </header>
+  
+  <h2>Aula 02 - Aula02 - Protocolos de Email</h2>
+
+<h3>1. Slide da aula</h3>
+
+<ul>
+<li><strong>Aula02 - Protocolos de Email</strong></li>
+</ul>
+
+
+<center>
+<iframe src="//www.slideshare.net/slideshow/embed_code/45588796" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+</center>
+
+
+<h3>2. SMTP – Simple mail transfer Protocol</h3>
+
+<p>Em relação ao SMTP, podemos descrevê-lo da seguinte forma:</p>
+
+<blockquote><p>“SMTP é um protocolo relativamente simples, baseado em texto simples, onde um ou vários destinatários de uma mensagem são especificados (e, na maioria dos casos, validados) sendo, depois, a mensagem transferida.
+Esse protocolo usa a porta 25 numa rede TCP. A resolução DNS de um servidor SMTP de um dado domínio é possibilitada por sua entrada MX (Mail eXchange).
+A utilização em massa do SMTP remonta aos anos 80. Na altura era um complemento ao UUCP, que era mais adequado para transferências de correio eletrônico entre máquinas sem ligação permanente. Por outro lado, o desempenho do SMTP aumenta se as máquinas envolvidas, emissor e receptor, se encontrarem ligadas permanentemente.”</p></blockquote>
+
+<p><strong>fonte:</strong> wikipedia</p>
+
+<h3>3 Correio eletrônico</h3>
+
+<p>Um dos serviços de rede mais populares é o correio eletrônico (email). O correio eletrônico é usado na transmissão de uma única mensagem que pode incluir:
+   * Texto.
+   * Voz.
+   * Vídeo, gráfico ou mais de um desses objetos.</p>
+
+<p>O protocolo SMTP (Simple Mail Transfer Protocol) é o mecanismo padrão de correio eletrônico da Internet.</p>
+
+<h4>3.1 Formato de um e-mail</h4>
+
+<p><img src="images/aula01_fig01.jpg" width="400" height="400" title="Formato de um e-mail" ></p>
+
+<ul>
+<li>Endereços
+
+<ul>
+<li>Para entregar um e-mail, o sistema de correio eletrônico deve usar um esquema de endereçamento com um endereço único.</li>
+<li>0 esquema de endereçamento usado pelo SMTP consiste em duas partes: uma parte local e um nome de domínio, separados pelo sinal @</li>
+</ul>
+</li>
+</ul>
+
+
+<p><img src="images/aula01_fig02.jpg" width="300" height="300" title="Formato de um e-mail" ></p>
+
+<ul>
+<li><p><strong>Parte Local</strong>:
+A parte local define o nome de um arquivo especial, denominado caixa de correio, onde todos os e-mails recebidos pelo usuário são depositados para serem recuperados pelo user agent.</p></li>
+<li><p><strong>Nome do Domínio</strong>:
+A segunda parte do endereço é o nome do domínio. Uma organização seleciona usualmente um ou dois hosts da rede para transmitir e receber os e-mails. Cada um desses hosts é denominado servidor de e-mail.
+O nome do domínio atribuído a cada servidor de e-mail é recebido da base de dados DNS ou é um nome lógico (por. ex., o nome da organização).</p></li>
+</ul>
+
+
+<h4>3.2 Cabeçalho de um e-mail</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Message-ID: &lt;39235E1C.1DC7EA90@example.com&gt;
+</span><span class='line'>Date: Wed, 17 May 2000 23:06:04 -0400
+</span><span class='line'>From: Doug Sauder &lt;dwsauder@example.com&gt;
+</span><span class='line'>X-Mailer: Mozilla 4.7 [en] (WinNT; I)
+</span><span class='line'>X-Accept-Language: en
+</span><span class='line'>MIME-Version: 1.0
+</span><span class='line'>To: Joe Blow &lt;blow@example.com&gt;
+</span><span class='line'>Subject: Test message from Netscape Communicator 4.7
+</span><span class='line'>Content-Type: multipart/mixed;
+</span><span class='line'>boundary="------------A1FCDEE154E03D875E5D6779"</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>3.3 MIME (Multipurpose Internet Mail Extensions)</h4>
+
+<ul>
+<li><p>O SMTP é um protocolo de transferência de e-mail simples. Entretanto, essa simplicidade tem um preço.</p></li>
+<li><p>O SMTP pode enviar mensagens somente no formato de 7-bits do código ASCII. Logo. é inevitável que haja limitações.</p></li>
+</ul>
+
+
+<p>Por exemplo, ele não pode ser usado em idiomas não suportados pelo código ASCII (tal como o francês, alemão, russo, chinês e o japonês). Além disso, não pode ser utilizado para enviar arquivos binários (arquivos que armazenam dados em um cadeia de Os e 1s sem usar qualquer tipo de codificação), áudio ou vídeo.</p>
+
+<ul>
+<li><p>A especificação MIME (Multipurpose Internei Mail Extensions) é um protocolo suplementar que permite transmissões de dados não ASCII através do SMTP;</p></li>
+<li><p>O MIME não é um protocolo de e-mail e não pode substituir o SMTP, Ele é apenas uma extensão do SMTP.</p></li>
+<li><p>O MIME converte dados no formato não ASCII do remetente em dados ASCII e os entrega ao cliente SMTP para ser enviado à Internet. O servidor SMTP recebe esses dados no formato ASCII e os entrega ao MIME para serem reconvertidos para a forma original.</p></li>
+<li><p>O MIME não se restringe ao SMTP, podendo ser utilizado em outros protocolos também, como o HTTP.</p></li>
+<li><p>O S/MIME é um padrão desenvolvido para prover segurança ao MIME.</p></li>
+</ul>
+
+
+<p>Podemos pensar no MIME como um conjunto de funções de software que converte dados genéricos em dados no formato ASCII e vice-versa.</p>
+
+<p>O MIME define cinco tipos de cabeçalho que podem ser adicionados à seção do cabeçalho das mensagens SMTP original para definir os parâmetros de conversão.</p>
+
+<ol>
+<li>MIME Version (MIME-Versão)</li>
+<li>Content-Type(Conteúdo-Tipo)</li>
+<li>Content-Transfer-Encoding(Conteúdo-Transferência-Codificação)</li>
+<li>Content-ld (Conteúdo-Identificação)</li>
+<li>Content-Description (Conteúdo-Pescrição)</li>
+</ol>
+
+
+<p><img src="images/aula01_fig03.jpg" width="500" height="500" title="Funcionamento do MIME" ></p>
+
+<h5>3.3.1 Cabeçalho do Mime</h5>
+
+<p><img src="images/aula01_fig04.jpg" width="400" height="400" title="Cabeçalho do MIME" ></p>
+
+<h4>3.4 Caminho do SMTP</h4>
+
+<p><img src="images/aula01_fig05.jpg" width="500" height="500" title="Caminho do SMTP" ></p>
+
+<h4>3.5 POP3</h4>
+
+<p>O Post Office Protocol (POP3) é um protocolo utilizado no acesso remoto a uma caixa de correio eletrônico.
+Ele está definido no RFC 1939 e permite que todas as mensagens contidas numa caixa de correio eletrônico possam ser transferidas sequencialmente para um computador local.
+Dessa maneira, o usuário pode ler as mensagens recebidas, apagá-las, responder-lhes, armazená-las, etc.</p>
+
+<p>O funcionamento do protocolo POP3 é off-line, uma vez que o processo suportado se baseia nas seguintes etapas:</p>
+
+<ul>
+<li><p>É estabelecida uma ligação TCP entre a aplicação cliente de e-mail (User Agent - UA) e o servidor onde está a caixa de correio (Message Transfer Agent - MTA)</p></li>
+<li><p>O usuário se autentica;</p></li>
+<li><p>Todas as mensagens existentes na caixa de correio são transferidas sequencialmente para o computador local;</p></li>
+<li><p>As mensagens são apagadas da caixa de correio (opcionalmente, o protocolo pode ser configurado para que as mensagens não sejam apagadas da caixa de correio; se esta opção não for utilizada, deve-se utilizar sempre o mesmo computador para ler o correio eletrônico, para poder manter um arquivo das mensagens);</p></li>
+<li><p>A ligação com o servidor é terminada;</p></li>
+<li><p>O usuário pode agora ler e processar as suas mensagens (off-line).</p></li>
+</ul>
+
+
+<h5>3.5.1 POP3 - Desvantagens</h5>
+
+<ul>
+<li><p>0 POP3 assume que toda vez que um cliente acessa o servidor toda a caixa de correio será transferida.</p></li>
+<li><p>Isto não é conveniente para as pessoas que acessam as caixas de correio de diferentes clientes.</p></li>
+<li><p>O POP3 é deficiente nesses casos.</p></li>
+<li><p>Ele não permite que o usuário organize e-mails no próprio servidor; além disso, o POP3 não permite que o usuário tenha pastas diferentes no servidor;</p></li>
+<li><p>Usa a porta 110 para estabelecer uma conexão entre a máquina do destinatário de uma mensagem e o MTA;</p></li>
+</ul>
+
+
+<h4>3.6 imap4</h4>
+
+<ul>
+<li><p>Internet Mail access Protocol – Definido na RFC 2060, o IMAP procura resolver os problemas dos usuários móveis, que estão sempre acessando a caixa postal de locais diferentes.</p></li>
+<li><p>O IMAP foi projetado para que as mensagens fossem deixadas no servidor, ao invés de transferidas a maquina do cliente, como faz o POP. As mensagens e pastas podem ser manipuladas pelo IMAP como se fossem locais, mas estarão sempre como foram deixadas no último acesso, independente de onde o usuário da caixa está acessando.</p></li>
+<li><p>O Imap usa a porta 143 do TCP para conexão MUA-MTA.</p></li>
+</ul>
+
+
+<p><strong>O IMAP4 oferece as seguintes funções extra:</strong></p>
+
+<ul>
+<li><p>Um usuário pode verificar os e-mails antes de baixá-los.</p></li>
+<li><p>Um usuário pode fazer uma busca de um determinado conteúdo em um e-mail antes de baixá-lo.</p></li>
+<li><p>Um usuário pode baixar apenas as mensagens selecionadas. Isto é especialmente útil quando a largura de banda do link utilizado é baixa e o e-mail contém &ldquo;arquivos pesados&#8217;, como de multimídia.agar ou renomear as caixas de correio no servidor de e-mail.</p></li>
+<li><p>Um usuário pode criar uma hierarquia de caixas de correio em uma pasta para armazenamento de e-mail.</p></li>
+</ul>
+
+
+<h4>3.7 Fluxograma de funcionamento dos protocolos POP3 e IMAP</h4>
+
+<p><img src="images/aula01_fig06.jpg" width="500" height="500" title="Caminho do POP3 e IMAP" ></p>
+
+<h4>3.8 Processos de Servidor de E-mail - MTA e MDA</h4>
+
+<ul>
+<li><p>Servidor de e-mail opera dois processos separados:</p>
+
+<ul>
+<li>Mail Transfer Agent (MTA);</li>
+<li>Mail Delivery Agent (MDA);</li>
+</ul>
+</li>
+<li><p>O processo MTA é utilizado para encaminhar e-mail.</p></li>
+<li>O MTA recebe mensagens do MUA ou de outro MTA em outro servidor de e-mail.
+Se a correspondência for endereçada a um usuário cuja caixa de correio fique no servidor local, ela será passada para o MDA.</li>
+</ul>
+
+
+<p><strong>Serviço de E-mail e Protocolos SMTP/POP</strong></p>
+
+<p><img src="images/aula01_fig07.jpg" width="500" height="500" title="MUA E MTA" ></p>
+
+<ul>
+<li><p>O <strong>MDA</strong> aceita um e-mail de um <strong>MTA</strong> e faz a entrega real.</p></li>
+<li><p>O <strong>MDA</strong> recebe toda correspondência chega no <strong>MTA</strong> e a coloca nas caixas de correio dos usuários adequados.</p></li>
+<li><p>O <strong>MDA</strong> também pode solucionar problemas de entrega final, como varredura de vírus, filtragem de spam e tratamento de recebimento de retorno.</p></li>
+<li><p>A maioria das comunicações por e-mail utiliza as aplicações<strong> MUA, MTA e MDA</strong>. No entanto, há outras alternativas para entrega de e-mail.</p></li>
+</ul>
+
+
+<p><img src="images/aula01_fig08.jpg" width="500" height="500" title="MUA E MTA" ></p>
+
+<p><img src="images/aula01_fig09.jpg" width="500" height="500" title="MUA E MTA" ></p>
+
+<h3>Referências</h3>
+
+<p>Livro “Comunicação de dados” – Forouzan</p>
+
+<p>Material Cisco Academy ver. 4.1</p>
+
+<hr />
+
+<p><a href="/aplicacoes/index.html">Retornar a página anterior</a></p>
+
+  
+    <footer>
+      <p class="meta">
+        
+        
+
+
+
+
+<time class='entry-date' datetime='2015-03-08T00:34:00-04:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>12:34 am</span></time>
+        
+      </p>
+      
+        <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://carlosveiga.com.br/aplicacoes/aula02.html" data-via="carlosnervosao" data-counturl="http://carlosveiga.com.br/aplicacoes/aula02.html" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+      
+    </footer>
+  
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Me</h1>
+  <p>Sou um analista de TI e professor que gosta de compartilhar um pouco do conhecimento adquirido durante minha jornada. Sou casado e agora pai. Seja bem vindo à esta base de conhecimento</p>
+</section>
+<section>
+<h1>Twitter</h1>
+<a class="twitter-timeline" href="https://twitter.com/carlosnervosao" data-widget-id="569682821523177472">Tweets by @carlosnervosao</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/02/22/informacoes-sobre-o-semestre/">Informações Sobre O Semestre</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h2>Category Cloud</h2>
+    <span id="tag-cloud"><a href='https://www.carlosveiga.com.br/octopress/blog/categories/informações' style='font-size: 160.0%'>informações</a> </span>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/nervosao">@nervosao</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'nervosao',
+            count: 4,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Nervosao -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+  <script type="text/javascript">
+  jQuery(document).ready(function() {
+    // Put a TOC right before the entry content.
+    generateTOC('.entry-content', 'Table of Contents');
+  });
+  </script>
+
+
+
+
+</body>
+</html>

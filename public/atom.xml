@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Blog do Prof. Nervosao]]></title>
+  <link href="http://carlosveiga.com.br/atom.xml" rel="self"/>
+  <link href="http://carlosveiga.com.br/"/>
+  <updated>2015-03-11T21:50:43-04:00</updated>
+  <id>http://carlosveiga.com.br/</id>
+  <author>
+    <name><![CDATA[Nervosao]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Informações Sobre O Semestre]]></title>
+    <link href="http://carlosveiga.com.br/blog/2015/02/22/informacoes-sobre-o-semestre/"/>
+    <updated>2015-02-22T22:50:26-04:00</updated>
+    <id>http://carlosveiga.com.br/blog/2015/02/22/informacoes-sobre-o-semestre</id>
+    <content type="html"><![CDATA[<h2>Método de Avaliação</h2>
+
+<pre><code> Média da N1: 6,0
+   Pesos:
+   N1: 80%
+   ATPS: 20%
+
+ Média da N2 = 6,0
+   Pesos:
+   N1 = 80%
+   ATPS = 20%
+
+ Média Final &gt;= 6,0
+</code></pre>
+
+<h2>Ementa das Disciplinas</h2>
+
+<p>Ementa do curso de Segurança de Redes: <a href="http://carlosveiga.com.br/downloads/Seguranca.pdf">Ementa</a>.</p>
+
+<p>Ementa do curso de Aplicações em Redes: <a href="http://carlosveiga.com.br/downloads/Aplicacoes.pdf">Ementa</a>.</p>
+
+<p>Ementa do curso de Infraestrutura de Redes: <a href="http://carlosveiga.com.br/downloads/Infraestrutura.pdf">Ementa</a>.</p>
+
+<p>Ementa do curso de Banco de Dados: <a href="http://carlosveiga.com.br/downloads/BancodeDados.pdf">Ementa</a>.</p>
+
+<h2>Datas de provas e prazos de entrega dos Trabalhos</h2>
+
+<table>
+<thead>
+<tr>
+<th>Disciplinas             </th>
+<th> N1        </th>
+<th> ATPS 01   </th>
+<th> N2(A definir)     </th>
+<th> ATPS 02</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aplicações em Redes   </td>
+<td> 06/04/2015</td>
+<td>30/03/2015 </td>
+<td> &mdash;       </td>
+<td> 01/06/2015</td>
+</tr>
+<tr>
+<td>Banco de Dados      </td>
+<td> 07/04/2015</td>
+<td>31/03/2015 </td>
+<td> &mdash;       </td>
+<td> 02/06/2015</td>
+</tr>
+<tr>
+<td>Segurança de Redes </td>
+<td> 08/04/2015</td>
+<td>01/04/2015 </td>
+<td> &mdash;       </td>
+<td> 03/06/2015</td>
+</tr>
+<tr>
+<td>Infraestrutura de Redes </td>
+<td> 09/04/2015</td>
+<td>02/04/2015 </td>
+<td> &mdash;       </td>
+<td> 04/06/2015</td>
+</tr>
+<tr>
+<td>Proj Intedisciplinar    </td>
+<td> 13/03/2015</td>
+<td>       </td>
+<td> 01/06/2015</td>
+<td>&mdash;</td>
+</tr>
+</tbody>
+</table>
+
+]]></content>
+  </entry>
+  
+</feed>
